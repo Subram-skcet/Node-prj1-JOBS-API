@@ -1,0 +1,54 @@
+
+###Get all jobs of a user
+get http://localhost:5000/api/v1/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWQ0ZDJjY2U3MWUyNDMzNjRjODBlMTIiLCJuYW1lIjoiYW5uYSIsImlhdCI6MTcwODQ0NjQxMiwiZXhwIjoxNzExMDM4NDEyfQ.G7UNvXPXx4aQCJa7BByGM4i7GvxfwUU8CAnaNH9FKBU
+
+###Get a single jobs of a user
+get http://localhost:5000/api/v1/jobs/65d5fb974fdee11658158a4fdcdcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWQ0ZDJjY2U3MWUyNDMzNjRjODBlMTIiLCJuYW1lIjoiYW5uYSIsImlhdCI6MTcwODQ0NjQxMiwiZXhwIjoxNzExMDM4NDEyfQ.G7UNvXPXx4aQCJa7BByGM4i7GvxfwUU8CAnaNH9FKBU
+
+###Create job of a single user
+post http://localhost:5000/api/v1/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWQ0ZDJjY2U3MWUyNDMzNjRjODBlMTIiLCJuYW1lIjoiYW5uYSIsImlhdCI6MTcwODQ0NjQxMiwiZXhwIjoxNzExMDM4NDEyfQ.G7UNvXPXx4aQCJa7BByGM4i7GvxfwUU8CAnaNH9FKBU
+Content-Type: application/json
+
+{
+    "company":"facebook",
+    "position":"back-end-developer"
+}
+
+
+###patch(update) a single job of a user
+PATCH http://localhost:5000/api/v1/jobs/65d5fbaa4fdee11658158a51
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWQ0ZDJjY2U3MWUyNDMzNjRjODBlMTIiLCJuYW1lIjoiYW5uYSIsImlhdCI6MTcwODQ0NjQxMiwiZXhwIjoxNzExMDM4NDEyfQ.G7UNvXPXx4aQCJa7BByGM4i7GvxfwUU8CAnaNH9FKBU
+Content-Type: application/json
+
+{
+     "company":"random",
+    "position":"full-stack-developer"
+}
+
+###Delete a task
+DELETE http://localhost:5000/api/v1/jobs/65d5f8e5aa17348a57c646a0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWQ0ZDJjY2U3MWUyNDMzNjRjODBlMTIiLCJuYW1lIjoiYW5uYSIsImlhdCI6MTcwODQ0NjQxMiwiZXhwIjoxNzExMDM4NDEyfQ.G7UNvXPXx4aQCJa7BByGM4i7GvxfwUU8CAnaNH9FKBU
+
+
+### Login a user
+post http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "name":"john",
+    "email":"john@gmail.com",
+    "password":"secret"
+}
+
+###Register a user
+post http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name":"peter",
+    "email":"peter@gmail.com",
+    "password":"secret"
+}
